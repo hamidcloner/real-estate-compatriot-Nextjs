@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { yekan } from "@/utils/fonts";
-
+import Layout from "@/layout/Layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
       <body className={yekan.className}>
-        {children}
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   );
